@@ -9,7 +9,6 @@
 }
 .row_posters {
   display: flex;
-  border: 2px solid orange;
   width: 100%;
   overflow-x: hidden;
   width: 100vw;

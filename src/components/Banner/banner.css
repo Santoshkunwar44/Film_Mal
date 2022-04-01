@@ -7,7 +7,8 @@
 
 .banner_content{
     margin-left: 30px;
-    height: 190px;
+    height: 333px;
+    
     padding-top: 140px;
 
 }
@@ -50,7 +51,8 @@
 }
 
 .banner_fadeBottom{
-    height: 7.4rem;
+    height: 7rem;
+    bottom: 0;
     background-image: linear-gradient(
         180deg,
         transparent,

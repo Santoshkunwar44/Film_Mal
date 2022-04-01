@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './App.css';
 import { Banner } from './components/Banner/Banner';
 import Navbar from './components/Navbar/Navbar';
@@ -5,22 +6,21 @@ import Row from './components/Row';
 import requests from "./request"
 
 function App() {
+
+  const [shouldPlay, setShouldPlay] = useState(false)
+
+
   return (
     <div className="App">
 
-      {/* <Navbar /> */}
-      {/* <Banner /> */}
-      <div className='row_container'>
+      <Navbar />
+      <Banner />
 
-        <Row title="NETFLIX ORIGINAL" fetchUrl={requests.fetchNetflixOriginals} isLargeRow />
-        {/* <Row title="Trending Now" fetchUrl={requests.fetchTrending} />
-        <Row title="Top Rated" fetchUrl={requests.fetchTopRated} />
-        <Row title="Action Movies" fetchUrl={requests.fetchActionMovies} />
-        <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} />
-        <Row title="Romance Movies" fetchUrl={requests.fetchRomanceMovies} />
-        <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies} />
-        <Row title="Documentaries" fetchUrl={requests.fetchDocumentries} /> */}
-      </div>
+      {
+        requests.map((movieApi, index) => <Row key={movieApi.endPoint} rowNo={index + 1} shouldPlay={shouldPlay} setShouldPlay={setShouldPlay} title={movieApi.type} fetchUrl={movieApi.endPoint} />
+        )
+      }
+
     </div>
   );
 }

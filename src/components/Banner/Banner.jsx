@@ -12,8 +12,8 @@ export const Banner = () => {
 
         const fetchBannerData = async () => {
 
-            const { data } = await instance.get(request.fetchRomanceMovies)
-            setBannerMovie(data.results[Math.floor(Math.random() * data.results.length - 1)])
+            const { data } = await instance.get(request[0].endPoint)
+            setBannerMovie(data.results[Math.floor(Math.random() * data.results?.length - 1)])
 
         }
 
