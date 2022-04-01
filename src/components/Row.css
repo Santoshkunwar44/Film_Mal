@@ -1,14 +1,19 @@
 .row {
-  margin-left: 20px;
+  width: 100%;
   color: white;
+  
 }
-
+.row_container{
+  width: 100%;
+  max-width: 100vw;
+}
 .row_posters {
   display: flex;
-  padding: 20px;
-  overflow-x: hidden;
+  border: 2px solid orange;
   width: 100%;
-  overflow-x: scroll;
+  overflow-x: hidden;
+  width: 100vw;
+
   
 }
 
